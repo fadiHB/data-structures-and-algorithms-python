@@ -2,7 +2,7 @@
 
 | all code challenges links      |
 | :-----:|
-|[code: Class 1](class-01)|
+|[code: Class 1](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-reverse)|
 |[code: Class 2](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/3)|
 |[code: Class 3](class-03)|
 |[code: Class 4](class-04)|
