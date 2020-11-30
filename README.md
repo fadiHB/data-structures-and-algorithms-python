@@ -1,6 +1,6 @@
 # 401 Python Data Structures and Algorithms
 
-| all reding-notes links      |
+| all code challenges links      |
 | :-----:|
 |[Read: Class 1](class-01)|
 |[Read: Class 2](class-02)|
