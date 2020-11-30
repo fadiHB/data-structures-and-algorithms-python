@@ -1,5 +1,16 @@
-# 401 Python Data Structures and Algorithms
+# array_shift
 
-Should be copied and moved to course repo as a reference folder for student's code challenge submissions.
+we have a list of iteam.
+and a value
 
-**NOTE:** may be replaced by cross course dsa repo
+## Challenge
+
+put a user value in the middle of the list's element
+
+## Approach & Efficiency
+
+I slice the list two half
+then add the value between them :)
+
+## Solution
+![array_shift](assets/array_shift.jpeg)
