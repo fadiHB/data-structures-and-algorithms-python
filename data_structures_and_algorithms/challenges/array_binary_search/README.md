@@ -13,4 +13,5 @@ I got a help from this website
 [javatpoint.com](https://www.javatpoint.com/binary-search-in-python)
 
 ## Solution
+
 ![white_board](assets/binary_search.jpeg)
