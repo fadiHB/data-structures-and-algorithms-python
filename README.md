@@ -4,7 +4,7 @@
 | :-----:|
 |[code: Class 1](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-reverse)|
 |[code: Class 2](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/challenges/array_shift)|
-|[code: Class 3](class-03)|
+|[code: Class 3](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-binary-search/data_structures_and_algorithms/challenges/array_binary_search)|
 |[code: Class 4](class-04)|
 |[code: Class 5](class-05)|
 |[code: Class 6](class-06)|
