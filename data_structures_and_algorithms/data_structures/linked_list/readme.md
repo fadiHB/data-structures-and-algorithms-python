@@ -26,3 +26,7 @@ PR link: https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/p
 
 Stretch Goal
 https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/doubly-linked-list
+
+![linked_list](assets/includes.jpg)
+![linked_list](assets/insert.jpg)
+![__str__](assets/__str__.jpg)
