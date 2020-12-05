@@ -23,3 +23,6 @@ includes methood:  takes any value as an argument and returns a boolean result d
 
 
 PR link: https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/5
+
+Stretch Goal
+https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/doubly-linked-list
