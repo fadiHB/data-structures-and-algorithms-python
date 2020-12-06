@@ -14,6 +14,8 @@ it took about 6 h
 
 ## API
 
+PR link : https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/6
+
 ![linked_list](asserts/code-6.jpeg)
 ![linked_list](asserts/code-61.jpeg)
 ![__str__](asserts/code-62.jpeg)
