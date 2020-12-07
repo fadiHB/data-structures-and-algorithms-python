@@ -44,6 +44,19 @@ class LinkedList:
         str1 += 'NULL'
         return str1
 
+    def kthFromEnd(self,k):
+      current = self.head
+      list_value = []
+      while current:
+        list_value.append(current.value)
+        current = current.next
+      reversed_list = list_value[::-1]
+      if (k > len(reversed_list)):
+          return 'the k is grater than list length'
+      elif k < 0:
+          return 'cant be negative number'
+      return reversed_list[k]
+
 
 if __name__ == '__main__':
     ll = LinkedList()
