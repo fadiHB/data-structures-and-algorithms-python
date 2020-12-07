@@ -13,6 +13,6 @@ it took about 30 min
 
 ## API
 
-PR link: 
+PR link: https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/7
 
 ![ll-kth-from-end](asserts/ll-kth-from-end.jpg)
