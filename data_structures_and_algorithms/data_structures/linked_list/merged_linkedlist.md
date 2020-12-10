@@ -14,6 +14,6 @@ it took about 6 h
 
 ## API
 
-PR link: https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/5
+PR link: https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/8
 
 ![linked_list](asserts/merge-linkedlist.jpg)
