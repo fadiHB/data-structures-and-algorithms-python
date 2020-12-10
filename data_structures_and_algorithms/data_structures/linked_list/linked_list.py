@@ -99,15 +99,16 @@ class LinkedList:
 
 def zip_lists(list1,list2):
     """
-    docstring
+    this function , is takes two linked list
+    and returned a new linked list-withc is merged of the two before
     """
     current_one = list1.head  
     current_two = list2.head
     if current_one == None:
-        return list2
+        return print(list2)
 
     if current_two == None:
-        return list1
+        return print(list1)
 
     new_list = LinkedList()
     while current_one or current_two:
@@ -139,18 +140,26 @@ def zip_lists(list1,list2):
 
 
 if __name__ == '__main__':
-    ll1 = LinkedList()
+    # ll1 = LinkedList()
 
-    ll1.insert(3)
-    ll1.insert(2)
-    ll1.insert(1)
+    # ll1.insert(3)
+    # ll1.insert(2)
+    # ll1.insert(1)
+    # ll2 = LinkedList()
+    # ll2.insert('e')
+    # ll2.insert('d')
+    # ll2.insert('c')
+    # ll2.insert('b')
+    # ll2.insert('a')
+    # ll2.append(0)  
+    ll1 = LinkedList()
+    ll1.append(3)
+    ll1.append(2)
+    ll1.append(1)
     ll2 = LinkedList()
-    ll2.insert('e')
-    ll2.insert('d')
-    ll2.insert('c')
-    ll2.insert('b')
-    ll2.insert('a')
-    ll2.append(0)  
+    ll2.append(3)
+    ll2.append(2)
+    ll2.append(1)
     print(ll1)
     print(ll2.__str__())
     # print(ll_zip(ll1,ll2))
