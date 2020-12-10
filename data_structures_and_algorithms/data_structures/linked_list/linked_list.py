@@ -139,19 +139,7 @@ def zip_lists(list1,list2):
 
 
 
-if __name__ == '__main__':
-    # ll1 = LinkedList()
-
-    # ll1.insert(3)
-    # ll1.insert(2)
-    # ll1.insert(1)
-    # ll2 = LinkedList()
-    # ll2.insert('e')
-    # ll2.insert('d')
-    # ll2.insert('c')
-    # ll2.insert('b')
-    # ll2.insert('a')
-    # ll2.append(0)  
+if __name__ == '__main__': 
     ll1 = LinkedList()
     ll1.append(3)
     ll1.append(2)
@@ -162,10 +150,8 @@ if __name__ == '__main__':
     ll2.append(1)
     print(ll1)
     print(ll2.__str__())
-    # print(ll_zip(ll1,ll2))
     print(zip_lists(ll1,ll2))
     
-    # print(ll_zip.__str__())
 
 
     
