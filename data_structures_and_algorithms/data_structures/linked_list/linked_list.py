@@ -7,6 +7,9 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+    
+    def __repr__(self):
+        return f"{self.value} -> {self.next} "
 
 
 class LinkedList:
@@ -22,6 +25,23 @@ class LinkedList:
             node.next = self.head
             self.head = node
         self.size += 1
+
+    def append (self,value):
+        node = Node(value)
+        current = self.head
+        if current == None:
+            self.insert(value)
+        else:
+            while current.next:
+                current = current.next
+            current.next = node
+            node.next = None
+
+            
+            
+        
+
+
 
     def includes(self, value):
         # node = Node(self.head)
@@ -44,41 +64,99 @@ class LinkedList:
         str1 += 'NULL'
         return str1
 
-    def zipLists(self, list1, list2):
 
 
+# def ll_zip(list1,list2):
+#     current_one = list1.head  
+#     current_two = list2.head
+#     print(current_one)
+#     print(current_two)
 
-        primary_current = list1.head
-        second_current = list2.head
+#     if current_one == None:
+#         return list2
+    
+#     if current_two == None:
+#         return list1
 
-        while primary_current and second_current :
+#     while  current_one and current_two:
+#         temp1 = current_one.next
+#         temp2 = current_two.next
+        
+#         current_one.next = current_two
+#         current_two.next = temp1
 
-            primary_current.next  = second_current#
-            second_current.next = primary_current.next.next#
+#         current_one = temp1
+#         current_two = temp2
+#         # if not current_one.next :
+#         #     while current_two:
+#         #         temp = current_one
+#         #         temp.next = current_two
+#         #         current_two = current_two.next
+#         #         temp = current_two
+#         #     return list1
+#     return list1
 
-            # second_current.next.next = primary_current
-            # primary_current.next.next = second_current 
 
-            return list1
+def zip_lists(list1,list2):
+    """
+    docstring
+    """
+    current_one = list1.head  
+    current_two = list2.head
+    if current_one == None:
+        return list2
+
+    if current_two == None:
+        return list1
+
+    new_list = LinkedList()
+    while current_one or current_two:
+        if current_one:
+            if new_list.head == None:
+                new_list.insert(current_one.value)
+            else:
+                new_list.append(current_one.value)
+        if current_two:
+            if new_list.head == None:
+                new_list.insert(current_two.value)
+            else:
+                new_list.append(current_two.value)
+
+        if current_one and current_one.next:
+            current_one = current_one.next
+        else:
+            current_one= False
+
+        if current_two and current_two.next:
+            current_two = current_two.next
+        else:
+            current_two=False
+
+
+    return new_list
+
+
 
 
 if __name__ == '__main__':
-    # ll = LinkedList()
-    # ll.insert(10)
-    # ll.insert(5)
-    # print(ll.head.next.value)
-    # print(ll)
     ll1 = LinkedList()
-    ll1.insert(1)
-    ll1.insert(2)
+
     ll1.insert(3)
+    ll1.insert(2)
+    ll1.insert(1)
     ll2 = LinkedList()
-    ll2.insert(1)
-    ll2.insert(2)
-    ll2.insert(3)
-    ll3 = LinkedList()
-    ll2.zipLists(ll1,ll2)
-    print(ll1.__str__())
+    ll2.insert('e')
+    ll2.insert('d')
+    ll2.insert('c')
+    ll2.insert('b')
+    ll2.insert('a')
+    ll2.append(0)  
+    print(ll1)
+    print(ll2.__str__())
+    # print(ll_zip(ll1,ll2))
+    print(zip_lists(ll1,ll2))
+    
+    # print(ll_zip.__str__())
 
 
     
