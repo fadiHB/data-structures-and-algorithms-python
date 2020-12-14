@@ -1,6 +1,5 @@
 # from data_structures_and_algorithms.data_structures.stacks_and_queues.stacks_and_queues_Class10_1 import Queue
 # from data_structures_and_algorithms.data_structures.stacks_and_queues.stacks_and_queues_Class10_2 import Stacks,Node
-
 class Node:
     def __init__ (self,data):
         self.data = data
