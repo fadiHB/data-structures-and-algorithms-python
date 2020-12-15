@@ -53,35 +53,57 @@ class Queue:
 
     def enqueue (self,data):
         node = Node(data)
-        if self.rear:
-            node.next = self.rear
-            self.rear = node
-        else:
+        if not self.rear and not self.front:
             self.front = node
             self.rear = node
+        temp = self.rear
+        self.rear = node
+        temp.next = self.rear
+        
+
 
     def dequeue (self):
-        '''
-        to remove data from the queue
-        there are three status for that
-        1- the queue is empty
-        2- the queue have one value
-        3 -the queue have mor thae one value
-        '''
-        if not self.rear:
-            return('the queue is alreadt empty')
-        if not self.rear.next:
-            removed = self.rear.data
-            self.rear = None
-            return removed
-        if self.rear.next:
-            current = self.rear
-            while current.next != self.front :
-                current = current.next
-            removed =  current.next.data
-            current.next = None
-            self.front = current
-            return removed
+        # '''
+        # to remove data from the queue
+        # there are three status for that
+        # 1- the queue is empty
+        # 2- the queue have one value
+        # 3 -the queue have mor thae one value
+        # '''
+        # if not self.rear:
+        #     return('the queue is alreadt empty')
+        # if not self.rear.next:
+        #     removed = self.rear.data
+        #     self.rear = None
+        #     return removed
+        # if self.rear.next:
+        #     current = self.rear
+        #     while current.next != self.front :
+        #         current = current.next
+        #     removed =  current.next.data
+        #     current.next = None
+        #     self.front = current
+        #     return removed
+
+        if self.front:
+            temp = self.front.data
+            self.front = self.front.next
+            return temp
+        return 'the queue is alreadt empty'
+
+
+
+
+
+class Cat():
+     def __init__(self,name):
+        self.name = name
+        self.kind = 'cat'
+
+class Dog():
+    def __init__(self,name):
+        self.name = name
+        self.kind = 'dog'
 
 
 class AnimalShelter:
@@ -90,22 +112,55 @@ class AnimalShelter:
         self.dog_queue = Queue()
 
 
-    def enqueue(self):
-        pass
+    def enqueue(self,animal):
+        if animal.kind == 'cat':
+            self.cat_queue.enqueue(animal)
+            
+        if animal.kind == 'dog':
+            self.dog_queue.enqueue(animal)
+            
+    
+    def dequeue (self,kind):
 
+        #Stretch Goal
+        if (not self.cat_queue.front) and (not self.dog_queue.front):
+            return "the cat's queue and the dog's queue are both empty"
 
-class Animal:
-    pass
+        if kind == 'cat':
 
+            #Stretch Goal
+            if (self.cat_queue.front == None) and (self.dog_queue.front):
+                dog = self.dog_queue.dequeue()
+                msg = f'cat queue is empty, here is a dog : {dog.name}'
+                return msg
+            cat = self.cat_queue.dequeue()
+            return cat.name
 
-class Cat(AnimalShelter):
-    pass
+        elif kind == 'dog':
 
-
-class Dog(AnimalShelter):
-    pass
-
-
+            #Stretch Goal
+            if (self.dog_queue.front == None) and (self.cat_queue.front):
+                cat = self.cat_queue.dequeue()
+                msg = f'cat queue is empty, here is a cat : {cat.name}'
+                return msg            
+            dog = self.dog_queue.dequeue()
+            return dog.name
 
 if __name__ == "__main__":
-    pass
+    alex = Dog('alex')
+    aln = Dog('Aln')
+    sam = Dog('Sam')
+    cray = Dog('Cray')
+    soso = Cat('Soso')
+    sno = Cat('Son')
+    animals = AnimalShelter()
+    animals.enqueue(alex)
+    animals.enqueue(aln)
+    animals.enqueue(sam)
+    animals.enqueue(cray)
+    animals.enqueue(soso)
+    animals.enqueue(sno)
+    animals.dequeue('cat')
+    animals.dequeue('dog')
+    animals.dequeue('dog')
+    animals.dequeue('dog')
