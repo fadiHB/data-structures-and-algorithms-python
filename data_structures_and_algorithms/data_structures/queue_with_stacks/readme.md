@@ -12,7 +12,6 @@ Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, thi
 | :----------- | :----------- | :----------- |
 | Enqueue | O(1) | O(1) |
 | Dequeue | O(n) | O(n) |
-p.s: there is an error in the image
 
 ## Solution
 
