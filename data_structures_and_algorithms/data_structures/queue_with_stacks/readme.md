@@ -15,6 +15,6 @@ Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, thi
 
 ## Solution
 
- it took 15 min ( after understadnig whtat exactly the challenge is)
+ it took 15 min ( after understanding what exactly the challenge was )
 
 ![img](assets/Queue_with_stacks.jpg)
