@@ -13,7 +13,7 @@
 |[code: Class 9](class-09)|
 |[code: Class 10](class-10)|
 |[Code 11_queue_with_stacks](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/queue_with_stacks)|
-|[Code 11 fifo-animal-shelter](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/11)|
+|[Code 11 fifo-animal-shelter](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/fifo_animal_shelter)|
 |[code: Class 13](class-13)|
 |[code: Class 14](class-14)|
 |[code: Class 15](class-15)|
