@@ -16,5 +16,8 @@ Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, thi
 ## Solution
 
  it took 15 min ( after understanding what exactly the challenge was )
+ 
+p.s
+maybe there is an error in calc the denqueue efficiency space
 
 ![img](assets/Queue_with_stacks.jpg)
