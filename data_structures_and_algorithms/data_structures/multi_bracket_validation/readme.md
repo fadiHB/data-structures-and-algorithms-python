@@ -18,4 +18,4 @@ Your function should take a string as its only argument, and should return a boo
 
 ![img](assets/IsBalance.jpg)
 
-[PR link]()
+[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/14)
