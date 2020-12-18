@@ -1,16 +1,16 @@
-from data_structures_and_algorithms.data_structures.queue_with_stacks.queue_with_stacks import PseudoQueue,Queue,Stacks,Node
+from data_structures_and_algorithms.data_structures.queue_with_stacks.queue_with_stacks import PseudoQueue,Stacks,Node
 
 def test_dequeue_one():
-    queue = PseudoQueue()
-    queue.enqueu(1)
-    queue.enqueu(2)
-    queue.enqueu(3)
-    queue.enqueu(4)
-    assert queue.dequeue() == 1
+    stack = PseudoQueue()
+    stack.enqueu(1)
+    stack.enqueu(2)
+    stack.enqueu(3)
+    stack.enqueu(4)
+    assert stack.dequeue() == 1
 
 
 def test_dequeue_two():
-    queue = PseudoQueue()
-    queue.enqueu(1)
-    queue.dequeue()
-    assert queue.dequeue() == 'Ops .. the Stack is empty man !!'
+    stack = PseudoQueue()
+    stack.enqueu(1)
+    stack.dequeue()
+    assert stack.dequeue() == 'Ops .. the Stack is empty man !!'
