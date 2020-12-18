@@ -15,4 +15,5 @@ Big O (n) for dequeue
 ![popANDpush](assets/eqANDdeq.jpg)
 ![enqueuANDdeququ](assets/pushANDpop.jpg)
 
-PR LINK:https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/9
+
+[PR Link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/19/files)
