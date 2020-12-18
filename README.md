@@ -11,7 +11,7 @@
 |[code: Class 7](class-07)|
 |[code: Class 8](class-08)|
 |[code: Class 9](class-09)|
-|[code: Class 10](class-10)|
+|[Code 10 stack and queue](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/blob/master/data_structures_and_algorithms/data_structures/stacks_and_queues/readme.md)|
 |[Code 11_queue_with_stacks](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/queue_with_stacks)|
 |[Code 11 fifo-animal-shelter](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/fifo_animal_shelter)|
 |[code13 -multi_bracket_validation ](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/multi_bracket_validation)|
