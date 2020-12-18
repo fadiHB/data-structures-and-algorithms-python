@@ -13,19 +13,19 @@ class Stacks:
     def push(self,data):
         node = Node(data)
         if self.top:
-            node.prev = self.top
             node.next = self.top
+            self.top = node
         self.top = node
 
     def pop(self):
-        if not self.top:
+        if self.isEmpty():
             return 'the stack is already empty ..!!'
         removed = self.top.data
         self.top = self.top.next
         return removed
 
     def peek(self):
-        if not self.top:
+        if self.isEmpty():
             return 'the stack is already empty ..!!'
         return self.top.data
 

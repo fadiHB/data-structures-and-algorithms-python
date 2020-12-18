@@ -5,8 +5,7 @@ class Node:
 
 class Queue:
     def __init__(self):
-        self.front = None
-        self.rear = None
+        self.front = self.rear = None
 
     def peek(self):
         try:
@@ -15,52 +14,42 @@ class Queue:
             return "the queue is already empty"
 
     def enqueue (self,data):
-        node = Node(data)
-        if self.rear:
-            node.next = self.rear
-            self.rear = node
-        else:
-            self.front = node
-            self.rear = node
+        node = Node(data) 
+          
+        if self.rear == None: 
+            self.front = self.rear = node 
+            return
+        self.rear.next = node
+        self.rear = node 
 
     def dequeue (self):
-        '''
-        to remove data from the queue
-        there are three status for that
-        1- the queue is empty
-        2- the queue have one value
-        3 -the queue have mor thae one value
-        '''
-        if not self.rear:
-            return('the queue is alreadt empty')
-        if not self.rear.next:
-            removed = self.rear.data
+  
+        if self.isEmpty(): 
+            return
+        temp = self.front 
+        self.front = temp.next
+  
+        if(self.front == None): 
             self.rear = None
-            return removed
-        if self.rear.next:
-            current = self.rear
-            while current.next != self.front :
-                current = current.next
-            removed =  current.next.data
-            current.next = None
-            self.front = current
-            return removed
+
+        return temp.data
+        
 
     def isEmpty(self):
-        if self.rear:
-            return False
-        return True
+        return self.front == None
             
 if __name__ == '__main__':
-    my_queue = Queue()
-    my_queue.enqueue(0)
-    my_queue.enqueue(1)
-    my_queue.enqueue(2)
-    print(my_queue.peek())
-    print(my_queue.dequeue())
-    print(my_queue.peek())
-    print(my_queue.isEmpty())
-    my_queue.dequeue()
-    print(my_queue.peek())
-    print(my_queue.dequeue())
-    print(my_queue.isEmpty())
+    q = Queue() 
+    q.enqueue(10) 
+    q.enqueue(20) 
+    print('peek ',q.peek())
+    q.dequeue()
+    print('peek ',q.peek())
+    q.dequeue()
+    print('peek ',q.peek())
+    q.enqueue(30) 
+    q.enqueue(40) 
+    q.enqueue(50)  
+    q.dequeue()
+    print("Front " + str(q.front.data)) 
+    print("Rear " + str(q.rear.data)) 

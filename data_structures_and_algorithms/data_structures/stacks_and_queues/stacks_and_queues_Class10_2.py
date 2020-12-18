@@ -10,36 +10,32 @@ class Stacks:
     def __init__(self):
         self.top = None
 
+    def isEmpty(self):
+        return self.top == None
+
     def push(self,data):
         '''
         method to add a new node to the stack
         '''
         node = Node(data)
         if self.top:
-            node.prev = self.top
             node.next = self.top
+            self.top = node
         self.top = node
 
 
     def pop(self):
-        if not self.top:
+        if self.isEmpty():
             return 'the stack is already empty ..!!'
-        new_top = self.top.prev
-        curret = self.top
         removed = self.top.data
-        curret.prev = new_top
-        self.top = new_top
+        self.top = self.top.next
         return removed
 
     def peek(self):
-        if not self.top:
+        if self.isEmpty():
             return 'the stack is already empty ..!!'
         return self.top.data
 
-    def isEmpty(self):
-        if not self.top:
-            return True
-        return False
     
 if __name__ == '__main__':
     my_stacks = Stacks()
