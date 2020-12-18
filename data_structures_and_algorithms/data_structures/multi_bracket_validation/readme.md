@@ -16,6 +16,6 @@ Your function should take a string as its only argument, and should return a boo
 
  it took 1 hour
 
-![img](assets/IsBalance.jpg)
+![img](assets/isBalance2.jpg)
 
-[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/14)
+[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/18)
