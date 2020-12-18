@@ -51,7 +51,7 @@ def isBalanced(str):
             continue
         if i =='}' and my_stacks.top.data != '{':
             return False
-    return True
+    return my_stacks.size == 0
     
 if __name__ == "__main__":
-    pass
+    print(isBalanced('({[}])'))
