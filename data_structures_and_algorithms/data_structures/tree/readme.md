@@ -24,6 +24,8 @@ using recursion
 | add |log(n) | log(n) |
 | contains |log(n) | log(n) |
 
+it tooks 6 hours
+
 [PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
 
 ![img1](assets/traversals.jpg)
