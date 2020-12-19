@@ -16,5 +16,15 @@ using recursion
 
 ## API
 
+| Method | Time | Space |
+| :----------- | :----------- | :----------- |
+| preOrder |log(n) | log(n) |
+| inOrder |log(n) | log(n) |
+| postOrder |log(n) | log(n) |
+| add |log(n) | log(n) |
+| contains |log(n) | log(n) |
+
+[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
+
 ![img1](assets/traversals.jpg)
 ![img1](assets/add_search.jpg)
