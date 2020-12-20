@@ -31,6 +31,17 @@ def test_add(prep):
     expected = [6, 5, -1, 0, 10, 7, 15]
     actual = expected
 
+def test_find_max(prep_max_min):
+    actual = prep_max_min.find_maximum_value()
+    expected = 20
+    actual = expected
+
+def test_find_min(prep_max_min):
+    actual = prep_max_min.find_minimum_value()
+    expected = -1
+    actual = expected
+
+
 @pytest.fixture
 def prep():
     bt = BinaryTree()
@@ -40,4 +51,15 @@ def prep():
     bt.root.left.left = Node(-1)
     bt.root.right.right = Node(15)
     bt.root.right.left = Node(7)
+    return bt
+
+@pytest.fixture
+def prep_max_min():
+    bt = BinaryTree()
+    bt.root = Node(6)
+    bt.root.right = Node(10)
+    bt.root.left = Node(5)
+    bt.root.left.left = Node(20)
+    bt.root.right.right = Node(15)
+    bt.root.right.left = Node(-1)
     return bt

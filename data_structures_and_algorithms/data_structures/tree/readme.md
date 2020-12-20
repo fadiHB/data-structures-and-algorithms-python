@@ -10,6 +10,10 @@ Create a BinarySearchTree class
 Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
 Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree.
+
+Write an instance method called find-minimum-value. Without utilizing any of the built-in methods available to your language, return the minimum value stored in the tree.
+
 ## Approach & Efficiency
 
 using recursion
@@ -23,10 +27,15 @@ using recursion
 | postOrder |log(n) | log(n) |
 | add |log(n) | log(n) |
 | contains |log(n) | log(n) |
+| find_maximum_value |log(n) | log(n) |
+| find_minimum_value |log(n) | log(n) |
 
+[PR link _ traversals](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
 it tooks 6 hours
 
-[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
+[PR link _ find_max_min]()
+it tooks 30 min
 
 ![img1](assets/traversals.jpg)
 ![img1](assets/add_search.jpg)
+![img1](assets/find_max_min.jpg)
