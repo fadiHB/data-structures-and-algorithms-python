@@ -16,7 +16,7 @@
 |[Code 12 fifo-animal-shelter](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/fifo_animal_shelter)|
 |[Code13 multi_bracket_validation ](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/multi_bracket_validation)|
 |[code: Class 14](class-14)|
-|[code: Class 15](class-15)|
+|[Code 15 BST](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
 |[code: Class 16](class-16)|
 |[code: Class 17](class-17)|
 |[code: Class 18](class-18)|
