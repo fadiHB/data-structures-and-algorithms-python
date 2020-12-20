@@ -33,7 +33,7 @@ using recursion
 [PR link _ traversals](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
 it tooks 6 hours
 
-[PR link _ find_max_min]()
+[PR link _ find_max_min](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/21)
 it tooks 30 min
 
 ![img1](assets/traversals.jpg)
