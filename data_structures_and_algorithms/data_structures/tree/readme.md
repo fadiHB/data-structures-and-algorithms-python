@@ -25,8 +25,8 @@ using recursion
 | preOrder |O(n) | O(1) |
 | inOrder |O(n) | O(1) |
 | postOrder |O(n) | O(1) |
-| add |log(n) | log(n) |
-| contains |log(n) | log(n) |
+| add |log(n) | O(1) |
+| contains |log(n) | O(1) |
 | find_maximum_value |O(n) | O(1) |
 | find_minimum_value |O(n) | O(1) |
 
