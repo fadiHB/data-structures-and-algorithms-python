@@ -17,7 +17,7 @@
 |[Code13 multi_bracket_validation ](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/multi_bracket_validation)|
 |[code: Class 14](class-14)|
 |[Code 15 BST](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
-|[code: Class 16](class-16)|
+|[code 16 find max/min val in BT](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
 |[code: Class 17](class-17)|
 |[code: Class 18](class-18)|
 |[code: Class 19](class-19)|
