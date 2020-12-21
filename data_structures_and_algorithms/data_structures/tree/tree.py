@@ -118,6 +118,37 @@ class BinaryTree:
                 root.left = BinaryTree.add(root.left, key) 
         return root
 
+
+    def find_maximum_value(self):
+        self.max_number = 0
+        def _walk(node):
+            if node.data > self.max_number:
+                self.max_number = node.data
+            if node.right:
+                _walk(node.right)
+            if node.left:
+                _walk(node.left)
+            return
+        _walk(self.root)
+        return self.max_number
+
+    def find_minimum_value(self):
+        self.min_number = 0
+        def _walk(node):
+            if node.data < self.min_number:
+                self.min_number = node.data
+            if node.right:
+                _walk(node.right)
+            if node.left:
+                _walk(node.left)
+            return
+        _walk(self.root)
+        return self.min_number
+                
+            
+
+
+
 if __name__ == '__main__':
     bt = BinaryTree()
     bt.root = Node(6)
@@ -125,7 +156,7 @@ if __name__ == '__main__':
     bt.root.left = Node(5)
     bt.root.left.left = Node(-1)
     bt.root.right.right = Node(15)
-    bt.root.right.left = Node(7)
+    bt.root.right.left = Node(20)
     print('pre order: ',bt.preOrder())
     print('in order : ',bt.inOrder())
     print('post order: ',bt.postOrder())
@@ -133,3 +164,5 @@ if __name__ == '__main__':
     bt.add(bt.root,0)
     print(bt.contains(0))
     print('pre order: ',bt.preOrder())
+    print(bt.find_maximum_value())
+    print(bt.find_minimum_value())
