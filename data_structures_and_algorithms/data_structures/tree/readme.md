@@ -22,13 +22,13 @@ using recursion
 
 | Method | Time | Space |
 | :----------- | :----------- | :----------- |
-| preOrder |log(n) | log(n) |
-| inOrder |log(n) | log(n) |
-| postOrder |log(n) | log(n) |
+| preOrder |O(n) | O(1) |
+| inOrder |O(n) | O(1) |
+| postOrder |O(n) | O(1) |
 | add |log(n) | log(n) |
 | contains |log(n) | log(n) |
-| find_maximum_value |log(n) | log(n) |
-| find_minimum_value |log(n) | log(n) |
+| find_maximum_value |O(n) | O(1) |
+| find_minimum_value |O(n) | O(1) |
 
 [PR link _ traversals](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
 it tooks 6 hours
