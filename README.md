@@ -3,8 +3,8 @@
 | all code challenges links      |
 | :-----:|
 |[code 1: Reverse an Array](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-reverse)|
-|[code: Class 2](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/challenges/array_shift)|
-|[code: Class 3](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-binary-search/data_structures_and_algorithms/challenges/array_binary_search)|
+|[code 2 :put value in the middle array](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/challenges/array_shift)|
+|[code 3: array_binary_search](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/array-binary-search/data_structures_and_algorithms/challenges/array_binary_search)|
 |[code: Class 4](class-04)|
 |[code: Class 5](class-05)|
 |[code: Class 6](class-06)|
