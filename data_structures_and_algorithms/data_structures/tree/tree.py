@@ -1,6 +1,44 @@
+# from data_structures_and_algorithms.data_structures.stacks_and_queues.stacks_and_queues_Class10_1 import Queue
+
+# class Queue:
+#     def __init__(self):
+#         self.front = self.rear = None
+
+#     def peek(self):
+#         try:
+#             return self.front.data
+#         except AttributeError:
+#             return "the queue is already empty"
+
+#     def enqueue (self,data):
+#         node = Node(data) 
+          
+#         if self.rear == None: 
+#             self.front = self.rear = node 
+#             return
+#         self.rear.next = node
+#         self.rear = node 
+
+#     def dequeue (self):
+  
+#         if self.isEmpty(): 
+#             return
+#         temp = self.front 
+#         self.front = temp.next
+  
+#         if(self.front == None): 
+#             self.rear = None
+
+#         return temp.data
+        
+
+#     def isEmpty(self):
+#         return self.front == None
+
 class Node:
     def __init__(self,data):
         self.data = data
+        self.next = None
         self.right = None
         self.left = None
 
@@ -46,6 +84,7 @@ class BinaryTree:
                 _walk(node.right)
         _walk(self.root)
         return output
+
 
 
     def postOrder(self):
@@ -110,7 +149,7 @@ class BinaryTree:
     def add(root, key): 
         if root is None:
             root = Node(key)
-            return root 
+            return root
         else: 
             if root.data < key: 
                 root.right = BinaryTree.add(root.right, key) 
@@ -144,6 +183,47 @@ class BinaryTree:
             return
         _walk(self.root)
         return self.min_number
+
+
+
+
+    def breadth_first(self):
+        if self.isEmpty():
+            return 'tree is empty'
+        temp = []
+        output = []
+        temp.append(self.root)
+
+        while len(temp) is not 0:
+            poped = temp.pop(0)
+            output.append(poped.data)
+            if poped.left:
+                temp.append(poped.left)
+            if poped.right:
+                temp.append(poped.right)
+        
+        return output     
+
+'''
+ALGORITHM breadthFirst(root)
+// INPUT  <-- root node
+// OUTPUT <-- front node of queue to console
+
+  Queue breadth <-- new Queue()
+  breadth.enqueue(root)
+
+  while breadth.peek()
+    node front = breadth.dequeue()
+    OUTPUT <-- front.value
+
+    if front.left is not NULL
+      breadth.enqueue(front.left)
+
+    if front.right is not NULL
+      breadth.enqueue(front.right)
+'''
+
+
                 
             
 
@@ -160,9 +240,10 @@ if __name__ == '__main__':
     print('pre order: ',bt.preOrder())
     print('in order : ',bt.inOrder())
     print('post order: ',bt.postOrder())
-    print(bt.contains(0))
-    bt.add(bt.root,0)
-    print(bt.contains(0))
-    print('pre order: ',bt.preOrder())
+    # print(bt.contains(0))
+    # bt.add(bt.root,0)
+    # print(bt.contains(0))
+    # print('pre order: ',bt.preOrder())
     print(bt.find_maximum_value())
     print(bt.find_minimum_value())
+    print(bt.breadth_first())

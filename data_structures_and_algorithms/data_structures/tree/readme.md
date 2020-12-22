@@ -14,6 +14,8 @@ Write an instance method called find-maximum-value. Without utilizing any of the
 
 Write an instance method called find-minimum-value. Without utilizing any of the built-in methods available to your language, return the minimum value stored in the tree.
 
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered
+
 ## Approach & Efficiency
 
 using recursion
@@ -29,6 +31,7 @@ using recursion
 | contains |log(n) | O(1) |
 | find_maximum_value |O(n) | O(1) |
 | find_minimum_value |O(n) | O(1) |
+| breadth_first |O(n) | O(1) |
 
 [PR link _ traversals](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/20)
 it tooks 6 hours
@@ -36,6 +39,10 @@ it tooks 6 hours
 [PR link _ find_max_min](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/21)
 it tooks 30 min
 
+[PR link _ breadth_first](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/22)
+it tooks 1 hour
+
 ![img1](assets/traversals.jpg)
 ![img1](assets/add_search.jpg)
 ![img1](assets/find_max_min.jpg)
+![img1](assets/breadth-first.jpg)
