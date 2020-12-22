@@ -86,6 +86,7 @@ class BinaryTree:
         return output
 
 
+
     def postOrder(self):
         '''
         input: root from binary tree
@@ -148,7 +149,7 @@ class BinaryTree:
     def add(root, key): 
         if root is None:
             root = Node(key)
-            return root 
+            return root
         else: 
             if root.data < key: 
                 root.right = BinaryTree.add(root.right, key) 
