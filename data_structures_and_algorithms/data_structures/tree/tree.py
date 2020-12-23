@@ -194,7 +194,7 @@ class BinaryTree:
         output = []
         temp.append(self.root)
 
-        while len(temp) is not 0:
+        while len(temp) > 0:
             poped = temp.pop(0)
             output.append(poped.data)
             if poped.left:

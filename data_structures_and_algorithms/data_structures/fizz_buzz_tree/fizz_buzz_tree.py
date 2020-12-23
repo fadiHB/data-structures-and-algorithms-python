@@ -69,7 +69,7 @@ if __name__ == "__main__":
     bt.root.right.left = Node(20)
     print(bt.preOrder())
     root2 = FizzBuzzTree(bt.root)
-    # bt2 = BinaryTree()
-    # bt2.root = root2
-    # print(bt2.preOrder())
-    print(bt.preOrder())
+    bt2 = BinaryTree()
+    bt2.root = root2
+    print(bt2.preOrder())
+    # print(bt.preOrder())
