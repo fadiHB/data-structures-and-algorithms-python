@@ -31,22 +31,22 @@ mergeSort(R)
     len(L) = 1  > 1 -> False
 
 i = j = k = 0
-i < len(L) and j < len(R) = 0 < 1 and 0 < 1 -> True
+i < len(L) and j < len(R) == 0 < 1 and 0 < 1 -> True
     L[i=0]=7 < R[j=0]=8 -> True
-        arr[k=0]=9 = L[i=0] = 7  #[7,7,8,3,2,1]
+        arr[k=0] = L[i=0] = 7  #[7,7,8,3,2,1]
         i += 1 -> i=0+1=1
 
-    i=1 < len(L)=1 -> False
-            ->  arr[k=0]=9 = R[j=0]=9   #[8,7,8,3,2,1]
-                j += 1 ->
-                k += 1
+    k += 1 -> k=0+1=1
+
+    i < len(L)  ==  1 < 1- > False
+
+    j < len(R)  ==  0 < 1 -> True
+            arr[k] = R[j] -> arr[1] = 8 #[7,8,8,3,2,1]
+            j += 1 -> j=0+1=1
+            k += 1 -> k=1+1=2
+            
+            j < len(R) == 1<1 -> False
 
 
-        i=1 < len(L)=1 -> False
-
-    j=0 < len(R)=1 -> True
-            arr[k=1]=7 = R[1]=8   #[7,8,8,3,2,1]
-            j += 1
-            k += 1
 
 

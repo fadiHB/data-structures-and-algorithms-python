@@ -16,9 +16,9 @@ def mergeSort(arr):
         # Sorting the second half
         mergeSort(R)
  
+        # Copy data to temp arrays L[] and R[]
         i = j = k = 0
  
-        # Copy data to temp arrays L[] and R[]
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 arr[k] = L[i]
@@ -28,12 +28,12 @@ def mergeSort(arr):
                 j += 1
             k += 1
  
-        # Checking if any element was left
+        # Checking if any element was left on the Left(L)
         while i < len(L):
             arr[k] = L[i]
             i += 1
             k += 1
- 
+        # Checking if any element was left on the Right(R)
         while j < len(R):
             arr[k] = R[j]
             j += 1
