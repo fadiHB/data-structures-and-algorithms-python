@@ -16,31 +16,46 @@ len(arr) = 6  > 1 -> True
             L2 = [9]
             len(L) = 1  > 1 -> False
 
+        mergeSort(R)
+            R2 = [7,9]
+            len(L) = 2  > 1 -> True
+                mid = len(R)//2 = 2 // 2 = 1
+                L3 = L[:mid] = [7]
+                R3 = L[mid:] = [9]
+
+                mergeSort(L)
+                L3 = [7]
+                len(L3) = 1  > 1 -> False
+
+                mergeSort(R)
+                R3 = [1]
+                len(R3) = 1  > 1 -> False
+
 mergeSort(R)
 R = [3,2,1]
 len(R) = 2 > 1 -> True
     mid = len(R) //2 = 2 //2  = 1
-    L3 = R[:mid] = [3]
-    R3 = R[mid:] = [2,1]
+    L4 = R[:mid] = [3]
+    R4 = R[mid:] = [2,1]
 
     mergeSort(L)
-        L3 = [3]
-        len(L3) = 1  > 1 -> False
+        L4 = [3]
+        len(L4) = 1  > 1 -> False
 
     mergeSort(R)
-        R3 = [2,1]
+        R4 = [2,1]
         len(R3) = 2  > 1 -> True
             mid = len(R)//2 = 2 // 2 = 1
-            L4 = L[:mid] = [2]
-            R4 = L[mid:] = [1]
+            L5 = L[:mid] = [2]
+            R5 = L[mid:] = [1]
 
             mergeSort(L)
-            L4 = [2]
-            len(L3) = 1  > 1 -> False
+            L5 = [2]
+            len(L5) = 1  > 1 -> False
 
             mergeSort(R)
-            R4 = [1]
-            len(R4) = 1  > 1 -> False
+            R5 = [1]
+            len(R5) = 1  > 1 -> False
 
 
 <!-- i = j = k = 0
