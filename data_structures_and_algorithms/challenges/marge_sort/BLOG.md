@@ -31,31 +31,31 @@ len(arr) = 6  > 1 -> True
                 R3 = [1]
                 len(R3) = 1  > 1 -> False
 
-mergeSort(R)
-R = [3,2,1]
-len(R) = 2 > 1 -> True
-    mid = len(R) //2 = 2 //2  = 1
-    L4 = R[:mid] = [3]
-    R4 = R[mid:] = [2,1]
-
-    mergeSort(L)
-        L4 = [3]
-        len(L4) = 1  > 1 -> False
-
     mergeSort(R)
-        R4 = [2,1]
-        len(R3) = 2  > 1 -> True
-            mid = len(R)//2 = 2 // 2 = 1
-            L5 = L[:mid] = [2]
-            R5 = L[mid:] = [1]
+    R = [3,2,1]
+    len(R) = 2 > 1 -> True
+        mid = len(R) //2 = 2 //2  = 1
+        L4 = R[:mid] = [3]
+        R4 = R[mid:] = [2,1]
 
-            mergeSort(L)
-            L5 = [2]
-            len(L5) = 1  > 1 -> False
+        mergeSort(L)
+            L4 = [3]
+            len(L4) = 1  > 1 -> False
 
-            mergeSort(R)
-            R5 = [1]
-            len(R5) = 1  > 1 -> False
+        mergeSort(R)
+            R4 = [2,1]
+            len(R3) = 2  > 1 -> True
+                mid = len(R)//2 = 2 // 2 = 1
+                L5 = L[:mid] = [2]
+                R5 = L[mid:] = [1]
+
+                mergeSort(L)
+                L5 = [2]
+                len(L5) = 1  > 1 -> False
+
+                mergeSort(R)
+                R5 = [1]
+                len(R5) = 1  > 1 -> False
 
 
 <!-- i = j = k = 0
