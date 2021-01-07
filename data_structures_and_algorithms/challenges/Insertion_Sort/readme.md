@@ -13,3 +13,5 @@ we should do Selection Sort
 ## Solution
 ![img](inser_sort.jpg)
 ![img](inser_sort_blog.jpg)
+
+[link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/challenges/Insertion_Sort)
