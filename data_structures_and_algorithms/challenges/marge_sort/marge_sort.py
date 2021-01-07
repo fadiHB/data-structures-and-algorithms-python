@@ -41,7 +41,6 @@ def mergeSort(arr):
  
 # Code to print the list
  
- 
 def printList(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")

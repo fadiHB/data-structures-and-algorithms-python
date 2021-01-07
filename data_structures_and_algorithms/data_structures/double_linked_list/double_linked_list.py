@@ -50,3 +50,4 @@ if __name__ == "__main__":
     print(dll.head.value)
     print(dll.__str__())
     print(dll.includes(7))
+    
