@@ -13,3 +13,5 @@ ordered the list using marge sort way
 ## Solution
 
 ![img](marge_sort.jpg)
+
+[PR link](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/27)
