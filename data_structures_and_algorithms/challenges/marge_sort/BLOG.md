@@ -1,76 +1,59 @@
-arr = [9,7,8,3,2,1]
-mergeSort(arr1)
-len(arr) = 6  > 1 -> True
-    mid = len(arr)//2 = 6 // 2 = 3
-    L = arr[:mid] = [9,7,8]
-    R = arr[mid:] = [3,2,1]
+# Merge Sort
 
-    mergeSort(L)
-        L = [9,7,8]
-        len(L) = 3  > 1 -> True
-            mid = len(L)//2 = 3 // 2 = 1
-            L2 = L[:mid] = [9]
-            R2 = L[mid:] = [7,8]
+Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
 
-        mergeSort(L)
-            L2 = [9]
-            len(L) = 1  > 1 -> False
+## Problem Domain:
+Write a function that implements the Merge sort algorithm, where the input is a list and the output is the sorted list.
 
-        mergeSort(R)
-            R2 = [7,9]
-            len(L) = 2  > 1 -> True
-                mid = len(R)//2 = 2 // 2 = 1
-                L3 = L[:mid] = [7]
-                R3 = L[mid:] = [9]
+## Algorithm
+Find the middle point to divide the array into two halves.
+Call mergeSort for first half
+Call mergeSort for second half.
+Merge the two halves sorted
 
-                mergeSort(L)
-                L3 = [7]
-                len(L3) = 1  > 1 -> False
+## Pseudo Code:
+ALGORITHM Mergesort(arr)
+    DECLARE n <-- arr.length
+           
+    if n > 1
+      DECLARE mid <-- n/2
+      DECLARE left <-- arr[0...mid]
+      DECLARE right <-- arr[mid...n]
+      // sort the left side
+      Mergesort(left)
+      // sort the right side
+      Mergesort(right)
+      // merge the sorted left and right sides together
+      Merge(left, right, arr)
 
-                mergeSort(R)
-                R3 = [1]
-                len(R3) = 1  > 1 -> False
+ALGORITHM Merge(left, right, arr)
+    DECLARE i <-- 0
+    DECLARE j <-- 0
+    DECLARE k <-- 0
 
-    mergeSort(R)
-    R = [3,2,1]
-    len(R) = 2 > 1 -> True
-        mid = len(R) //2 = 2 //2  = 1
-        L4 = R[:mid] = [3]
-        R4 = R[mid:] = [2,1]
-
-        mergeSort(L)
-            L4 = [3]
-            len(L4) = 1  > 1 -> False
-
-        mergeSort(R)
-            R4 = [2,1]
-            len(R3) = 2  > 1 -> True
-                mid = len(R)//2 = 2 // 2 = 1
-                L5 = L[:mid] = [2]
-                R5 = L[mid:] = [1]
-
-                mergeSort(L)
-                L5 = [2]
-                len(L5) = 1  > 1 -> False
-
-                mergeSort(R)
-                R5 = [1]
-                len(R5) = 1  > 1 -> False
-
-
-<!-- i = j = k = 0
-i < len(L) and j < len(R) == 0 < 1 and 0 < 1 -> True
-    L[i=0]=7 < R[j=0]=8 -> True
-        arr[k=0] = L[i=0] = 7  #[7,7,8,3,2,1]
-        i += 1 -> i=0+1=1
-
-    k += 1 -> k=0+1=1
-
-    i < len(L)  ==  1 < 1- > False
-
-    j < len(R)  ==  0 < 1 -> True
-            arr[k] = R[j] -> arr[1] = 8 #[7,8,8,3,2,1]
-            j += 1 -> j=0+1=1
-            k += 1 -> k=1+1=2
+    while i < left.length && j < right.length
+        if left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else
+            arr[k] <-- right[j]
+            j <-- j + 1
             
-            j < len(R) == 1<1 -> False -->
+        k <-- k + 1
+
+    if i = left.length
+       set remaining entries in arr to remaining values in right
+    else
+       set remaining entries in arr to remaining values in left
+
+Trace (Visual):
+Input: [38, 27, 43, 3, 9, 82, 10]
+
+
+![trace](trace_marge_sort.jpg)
+
+Time Complexity:
+
+|method|Time|space|
+|:--:|:--:|:--|
+|marge_sort|O(n log (n))|O(n)|
