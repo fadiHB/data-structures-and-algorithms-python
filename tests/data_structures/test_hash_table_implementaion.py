@@ -5,18 +5,23 @@ def test_add(prep):
     actual = prep.add('name', 'Ahmad')
     assert prep.contains('name') == True   
 
+def test_hash(prep):
+    assert prep.get_hash('could') == 903
+    assert prep.get_hash('colud') == 903
+
 def test_get(prep):
+    prep.add('could', 67)
+    prep.add('colud', 100)
+    assert prep.get('could') == 67
     assert prep.get('colud') == 100
+    assert prep.get('test') == 'the key is not valid'
 
 def test_contain(prep):
     assert prep.contains('test') == False
 
-def test_hash(prep):
-    assert prep.get_hash('could') == 903
+
 
 @pytest.fixture
 def prep():
     things = Hashmap(1024)
-    things.add('could', 67)
-    things.add('colud', 100)
     return things

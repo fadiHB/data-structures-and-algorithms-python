@@ -30,6 +30,7 @@ class Hashmap:
             if self.map[indx].key == key:
                 return self.map[indx].value
             self.map[indx] = self.map[indx].next
+        return 'the key is not valid'
 
     def contains(self,key):
         indx = self.get_hash(key)
