@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "/home/fadi/.pyenv/versions/3.8.6/bin/python"
+    "python.pythonPath": "/home/fadi/.pyenv/versions/3.8.6/bin/python",
+    "python.testing.pytestArgs": [
+        "data_structures_and_algorithms"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }
