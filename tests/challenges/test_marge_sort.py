@@ -1,9 +1,8 @@
-from data_structures_and_algorithms.challenges.marge_sort import marge_sort
+from data_structures_and_algorithms.challenges.marge_sort.marge_sort import mergeSort
 
 def test_marge_sort():
-    actual = marge_sort([9, 7, 8, 3, 2, 1])
+    actual = mergeSort([9, 7, 8, 3, 2, 1])
     expected = [1, 2, 3, 7, 8, 9 ]
     assert actual == expected
-    if actual == expected:
-        print('-------- Happy Path --------')
+
         
