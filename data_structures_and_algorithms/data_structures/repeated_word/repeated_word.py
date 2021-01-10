@@ -1,16 +1,20 @@
 import re
+from collections import Counter 
 
 def max_occurred_world(strs):
     world_dict = {}
     words = re.split(' |, |\*|\n ',strs.lower())
+
     for i in words:
         if i not in world_dict:
             world_dict[i] = 1
         else:
             world_dict[i] += 1
+
     max_key = max(world_dict.values())
     lst_max = [k for k,v in world_dict.items() if v == max_key]
-    return lst_max
+    print(lst_max)
+    return lst_max[0]
 
 
 
