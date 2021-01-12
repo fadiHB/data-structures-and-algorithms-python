@@ -71,7 +71,6 @@ class LinkedList:
             temp = temp.next
         self.append(k)
 
-    # not worked yet
     def delete(self,k):
         temp = self.head
 
@@ -119,12 +118,25 @@ class LinkedList:
                 current = current.next
             return False
 
+    # not checked yet
     def deleteDuplicates(self):
         temp = self.head
-        while not temp and not temp.next:
-            if temp.next.value == temp.value:
-                temp.next = temp.next.next
+        lst = set()
+        while temp:
+            set.add(temp.value)
             temp = temp.next
+        return lst
+
+    def reverse(self):
+        prev = None
+        current = self.head
+        while(current is not None):
+            # next = current.next
+            current.next = prev
+            prev = current
+            current = current.next
+        self.head = prev
+
 
     def __str__(self):
         current = self.head
@@ -134,6 +146,46 @@ class LinkedList:
             current = current.next
         str1 += 'NULL'
         return str1
+
+# not checked yet
+# Function to merge the lists 
+# Takes two lists which are sorted 
+# joins them to get a single sorted list 
+def marge_sorted_list(headA, headB): 
+  
+    # A dummy node to store the result 
+    dummyNode = Node(0) 
+  
+    # Tail stores the last node 
+    tail = dummyNode 
+    while True: 
+  
+        # If any of the list gets completely empty 
+        # directly join all the elements of the other list 
+        if headA is None: 
+            tail.next = headB 
+            break
+        if headB is None: 
+            tail.next = headA 
+            break
+  
+        # Compare the data of the lists and whichever is smaller is 
+        # appended to the last of the merged list and the head is changed 
+        if headA.data <= headB.data: 
+            tail.next = headA 
+            headA = headA.next
+        else: 
+            tail.next = headB 
+            headB = headB.next
+  
+        # Advance the tail 
+        tail = tail.next
+  
+    # Returns the head of the merged list 
+    return dummyNode.next
+
+
+
 
 
 
@@ -223,10 +275,11 @@ if __name__ == '__main__':
     print(ll2.__str__())
     print(ll2.size)
     print(ll2.find_middel())
-    ll2.insert_befor('A',2)
+    # ll2.insert_befor('A',2)
     print(ll2.__str__())
     # print(ll2.__str__())
     # print(zip_lists(ll1,ll2))
+    marge_sorted_list(ll1,ll2)
     
 
 
