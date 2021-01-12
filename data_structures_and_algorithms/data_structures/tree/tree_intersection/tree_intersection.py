@@ -9,6 +9,7 @@ class BinaryTree:
     def __init__(self):
         self.root = None 
 
+
     def isEmpty(self):
         return self.root == None
 
