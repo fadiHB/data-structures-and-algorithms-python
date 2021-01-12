@@ -38,42 +38,50 @@ class LinkedList:
             node.next = None
         self.size += 1
 
-    # not works yet
-    def insert_befor(self,n,k):
-        if k ==  None:
-            return 'k is none'
-        if k == self.head.value:
-            self.insert(k)
-            return
-        temp = self.head
-        while temp:
-            if temp.next.next.value == k:
-                node = Node(n)
-                node.next = temp.next.next
-                temp.next.next = node
+    def insertBefore(self, n, k):
+            node = Node(n)
+
+            if not self.head:
+                self.head = node
                 return
-        self.append(k)
-     
+
+            if k == self.head.value :
+                self.insert(k)
+                return
+
+            temp = self.head
+            while temp:
+                if temp.next.value == k:
+                    node.next = temp.next
+                    temp.next = node
+                    return
+                temp = temp.next
+
+            self.append(n)
 
     def insert_after(self,n,k):
-        if k ==  None:
-            return 'k is none'
-        if k == self.head.value:
-            self.insert(k)
+        node = Node(n)
+
+        if not self.head:
+            self.head = node
             return
+
+        if k == self.head.value:
+            self.append(n)
+            return
+
         temp = self.head
         while temp:
             if temp.value == k:
-                node = Node(n)
                 node.next = temp.next
                 temp.next = node
                 return
             temp = temp.next
-        self.append(k)
+
+        self.append(n)
 
     def delete(self,k):
         temp = self.head
-
         # best case _ the k in the head
         if temp:
             if temp.value == k:
@@ -90,11 +98,10 @@ class LinkedList:
 
         # if we reach to the end of the linked list, without any match !
         if temp == None:
-            return 'your data in so inclde in the linked_list to deleted'
+            return 'your data in not inclde in the linked_list to deleted'
 
         prev.next = temp.next
         temp = None
-
 
     def find_middel(self):
         if not self.head:
@@ -130,13 +137,12 @@ class LinkedList:
     def reverse(self):
         prev = None
         current = self.head
-        while(current is not None):
-            # next = current.next
+        while not current:
+            next = current.next
             current.next = prev
             prev = current
-            current = current.next
+            current = next
         self.head = prev
-
 
     def __str__(self):
         current = self.head
@@ -147,12 +153,30 @@ class LinkedList:
         str1 += 'NULL'
         return str1
 
-# not checked yet
+    def palind(self):
+        list2 = []
+        current =self.head
+        while current:
+            list2.append(current.value)
+            current= current.next
+
+        isPalind =True
+        while current: # take from the first
+            value= list2.pop() # take from the last
+            if current.value == value :#compair between the first and the last
+                isPalind = True
+            else:
+                return False
+            current = current.next
+        return isPalind
+
+
 # Function to merge the lists 
 # Takes two lists which are sorted 
 # joins them to get a single sorted list 
-def marge_sorted_list(headA, headB): 
-  
+def marge_sorted_list(ll1, ll2): 
+    headA = ll1.head
+    headB = ll2.head
     # A dummy node to store the result 
     dummyNode = Node(0) 
   
@@ -171,7 +195,7 @@ def marge_sorted_list(headA, headB):
   
         # Compare the data of the lists and whichever is smaller is 
         # appended to the last of the merged list and the head is changed 
-        if headA.data <= headB.data: 
+        if headA.value <= headB.value: 
             tail.next = headA 
             headA = headA.next
         else: 
@@ -228,38 +252,6 @@ def zip_lists(list1,list2):
 
     return new_list
 
-    
-# def ll_zip(list1,list2):
-#     current_one = list1.head  
-#     current_two = list2.head
-#     print(current_one)
-#     print(current_two)
-
-#     if current_one == None:
-#         return list2
-    
-#     if current_two == None:
-#         return list1
-
-#     while  current_one and current_two:
-#         temp1 = current_one.next
-#         temp2 = current_two.next
-        
-#         current_one.next = current_two
-#         current_two.next = temp1
-
-#         current_one = temp1
-#         current_two = temp2
-#         # if not current_one.next :
-#         #     while current_two:
-#         #         temp = current_one
-#         #         temp.next = current_two
-#         #         current_two = current_two.next
-#         #         temp = current_two
-#         #     return list1
-#     return list1
-
-
 
 
 if __name__ == '__main__': 
@@ -272,14 +264,17 @@ if __name__ == '__main__':
     ll2.append(2)
     ll2.append(1)
     # print(ll1)
-    print(ll2.__str__())
-    print(ll2.size)
-    print(ll2.find_middel())
-    # ll2.insert_befor('A',2)
+    print(ll1.__str__())
+    # print(ll2.size)
+    # print(ll2.find_middel())
+    ll2.insertBefore('A',2)
     print(ll2.__str__())
     # print(ll2.__str__())
     # print(zip_lists(ll1,ll2))
-    marge_sorted_list(ll1,ll2)
+    # print(marge_sorted_list(ll1,ll2))
+    # ll1.reverse
+    # print(ll1.__str__())
+    
     
 
 
