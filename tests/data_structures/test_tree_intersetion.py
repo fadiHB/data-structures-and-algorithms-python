@@ -1,3 +1,8 @@
+# from data_structures_and_algorithms.data_structures.tree.tree_intersection.tree_intersection import Node, BinaryTree, tree_intersection
+
+import pytest
+
+
 class Node:
     def __init__(self,data):
         self.data = data
@@ -9,17 +14,11 @@ class BinaryTree:
     def __init__(self):
         self.root = None 
 
-
-    def isEmpty(self):
-        return self.root == None
-
     def preOrder(self):
         '''
         input: root from binary tree
         output: list with nodes' binary with the order: root -> left -> right
         '''
-        if self.isEmpty():
-            return 'the tree is empty'
         output = []
         def _walk(node):
             output.append(node.data)
@@ -40,11 +39,14 @@ def tree_intersection(bt1,bt2):
             common_data.append(i)
     return common_data
 
+def test_tree_intersection(prep):
+    actual = tree_intersection(prep[0],prep[1])
+    expected = [6, -1, 20]
+    assert actual == expected
 
 
-
-
-if __name__ == "__main__":
+@pytest.fixture
+def prep():
     bt1 = BinaryTree()
     bt1.root = Node(6)
     bt1.root.right = Node(10)
@@ -61,6 +63,5 @@ if __name__ == "__main__":
     bt2.root.right.right = Node(30)
     bt2.root.right.left = Node(20)
 
-
-    print(tree_intersection(bt1,bt2))
-
+    return [bt1,bt2]
+    
