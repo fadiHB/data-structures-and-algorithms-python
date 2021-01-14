@@ -174,43 +174,42 @@ class LinkedList:
 # Function to merge the lists 
 # Takes two lists which are sorted 
 # joins them to get a single sorted list 
-def marge_sorted_list(ll1, ll2): 
+def marge_sorted_list(ll1, ll2):
     headA = ll1.head
     headB = ll2.head
-    # A dummy node to store the result 
-    dummyNode = Node(0) 
+    # A dummy node to store the result
+    dummyNode = Node(0)
   
     # Tail stores the last node 
-    tail = dummyNode 
-    while True: 
+    tail = dummyNode
+    while True:
   
         # If any of the list gets completely empty 
         # directly join all the elements of the other list 
-        if headA is None: 
+        if  not headA: 
             tail.next = headB 
             break
-        if headB is None: 
+        if not headB: 
             tail.next = headA 
             break
   
-        # Compare the data of the lists and whichever is smaller is 
-        # appended to the last of the merged list and the head is changed 
+        # Compare the data of the lists
+        ## append the smaller one to the last of the marged list
+        ## update the head
         if headA.value <= headB.value: 
             tail.next = headA 
             headA = headA.next
         else: 
             tail.next = headB 
             headB = headB.next
-  
-        # Advance the tail 
+
+        # update
+        # Advance the tail # 
+        # very important setp
         tail = tail.next
   
     # Returns the head of the merged list 
     return dummyNode.next
-
-
-
-
 
 
 def zip_lists(list1,list2):
@@ -220,14 +219,18 @@ def zip_lists(list1,list2):
     """
     current_one = list1.head  
     current_two = list2.head
-    if current_one == None:
-        return print(list2)
+    if not current_one:
+        return list2
 
-    if current_two == None:
-        return print(list1)
+    if not current_two:
+        return list1
 
     new_list = LinkedList()
-    while current_one or current_two:
+    while current_one or current_two:#  False or False = False
+        
+        # check the head of the marged list if it None or not
+        ## True  -> add the node to the bigeneng of the marger_lit
+        ## False -> add the node to the last of the marged_list
         if current_one:
             if new_list.head == None:
                 new_list.insert(current_one.value)
@@ -239,6 +242,7 @@ def zip_lists(list1,list2):
             else:
                 new_list.append(current_two.value)
 
+        # update
         if current_one and current_one.next:
             current_one = current_one.next
         else:
@@ -249,28 +253,27 @@ def zip_lists(list1,list2):
         else:
             current_two=False
 
-
     return new_list
 
 
 
 if __name__ == '__main__': 
     ll1 = LinkedList()
-    ll1.append(3)
-    ll1.append(2)
-    ll1.append(1)
+    ll1.append(30)
+    ll1.append(20)
+    ll1.append(10)
     ll2 = LinkedList()
     ll2.append(3)
     ll2.append(2)
     ll2.append(1)
     # print(ll1)
-    print(ll1.__str__())
+    # print(ll1.__str__())
     # print(ll2.size)
     # print(ll2.find_middel())
-    ll2.insertBefore('A',2)
-    print(ll2.__str__())
+    # ll2.insertBefore('A',2)
     # print(ll2.__str__())
-    # print(zip_lists(ll1,ll2))
+    # print(ll2.__str__())
+    print(zip_lists(ll1,ll2))
     # print(marge_sorted_list(ll1,ll2))
     # ll1.reverse
     # print(ll1.__str__())

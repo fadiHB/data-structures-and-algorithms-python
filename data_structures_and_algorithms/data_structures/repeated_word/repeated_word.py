@@ -1,5 +1,4 @@
 import re
-from collections import Counter 
 
 def max_occurred_world(strs):
     world_lst = []
