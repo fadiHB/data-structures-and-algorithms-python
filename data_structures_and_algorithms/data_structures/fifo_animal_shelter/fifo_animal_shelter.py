@@ -60,30 +60,7 @@ class Queue:
         self.rear = node
         temp.next = self.rear
         
-
-
     def dequeue (self):
-        # '''
-        # to remove data from the queue
-        # there are three status for that
-        # 1- the queue is empty
-        # 2- the queue have one value
-        # 3 -the queue have mor thae one value
-        # '''
-        # if not self.rear:
-        #     return('the queue is alreadt empty')
-        # if not self.rear.next:
-        #     removed = self.rear.data
-        #     self.rear = None
-        #     return removed
-        # if self.rear.next:
-        #     current = self.rear
-        #     while current.next != self.front :
-        #         current = current.next
-        #     removed =  current.next.data
-        #     current.next = None
-        #     self.front = current
-        #     return removed
 
         if self.front:
             temp = self.front.data
