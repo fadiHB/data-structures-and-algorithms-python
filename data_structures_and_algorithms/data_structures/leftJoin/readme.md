@@ -19,3 +19,5 @@ Approach: first, I iterate through the elements in the first hashmap. For each e
 ## Solution
 
 ![img](left_join.jpg)
+
+[Link PR](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/pull/32)
