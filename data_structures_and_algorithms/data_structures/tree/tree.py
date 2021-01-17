@@ -229,6 +229,7 @@ def normalBST_to_balanceBST(root):
 ######################################################
 # Given a binary search tree and a key,
 # delete the key and returns the new root
+# Delete a node from BST
 
 
 def minValueNode (node):
@@ -289,6 +290,7 @@ def deleteNode(root, key):
 
 ##############################################################
 # https://www.geeksforgeeks.org/deletion-binary-tree/
+# DELETE NODE FROM BT, NOT BST
 # Algorithm 
 # 1. Starting at root, find the deepest and rightmost node in binary tree and node which we want to delete. 
 # 2. Replace the deepest rightmost node’s data with node to be deleted. 
@@ -323,39 +325,61 @@ def deletion(root, key):
     if root.left == None and root.right == None: 
         if root.key == key :  
             return None
-        else : 
+        else :
             return root 
-    
-    # find the target node / log(n)
+    # find the rightmost node and the node that want to delete it.
     key_node = None
-    def _walk(root):
-        if root.data == key:
-            return root
-        if root.left:
-            return _walk(root.left)
-        if root.right:
-            return _walk(root.right)
-        return None
-    key_node = _walk(root)
+    q = [] 
+    q.append(root) 
+    while(len(q)): 
+        temp = q.pop(0) 
+        if temp.data == key: 
+            key_node = temp 
+        if temp.left: 
+            q.append(temp.left) 
+        if temp.right: 
+            q.append(temp.right) 
+    if key_node :  
+        x = temp.data 
+        deleteDeepest(root,temp) 
+        key_node.data = x 
+    return root
 
-    if not key_node:
-        return 'the node does not exist'
+###################################################################################################
+# hight depth from node: is how many nodes are there from the ground level to that node
+# hight = 1 + number of edges for the longets path from the node to the ground level
+# https://www.youtube.com/watch?v=_O-mK2g_jhI
 
-    # find the deepest and rightmost node
-    right_most = root
-    while right_most.right:
-        right_most = right_most.right.right
+# algorithm ( 3 main steps that shuld appley for each node)
+#  maxDepth()
+# 1. If tree is empty then return 0
+# 2. Else
+#      (a) Get the max depth of left subtree recursively  i.e., # step 1
+#           call maxDepth( tree->left-subtree)
+#      (a) Get the max depth of right subtree recursively  i.e., # step 2
+#           call maxDepth( tree->right-subtree)
+#      (c) Get the max of max depths of left and right  # step 3
+#           subtrees and add 1 to it for the current node.
+#          max_depth = max(max dept of left subtree,  
+#                              max depth of right subtree) 
+#                              + 1
+#      (d) Return max_depth
+def maxDepth(node): 
+    if node is None: 
+        return 0
+    else : 
+  
+        # Compute the depth of each subtree 
+        lDepth = maxDepth(node.left) #1
+        rDepth = maxDepth(node.right) #2
 
-    save_right_most_data = right_most.data 
-    # deleteDeepest(root,right_most)
-    while root:
-        if root.right == None:
-            root = None
-            break
-        root = root.right
-    key_node.data = save_right_most_data 
-
-    return root 
+        # Use the larger one            #3
+        if (lDepth > rDepth): 
+            hight = 1 + lDepth
+            return hight
+        else: 
+            hight = 1 + rDepth
+            return hight
 ##############################################################
 
 
@@ -380,6 +404,8 @@ if __name__ == '__main__':
     print('-'*30)
     x = deletion(bt.root,5)
     print(bt.breadth_first())
+    print('----- max depth ------')
+    print(maxDepth(bt.root))
 
     # lst = [1,2,3,4]
     # lst.sort()
