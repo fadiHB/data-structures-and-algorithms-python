@@ -110,12 +110,12 @@ class BinaryTree:
 
     @staticmethod
     def add(root, key): 
-        if root is None:
+        if root is None:    # check current
             root = Node(key)
             return root
-        if root.data < key: 
+        if root.data < key: # check befor go right
             root.right = BinaryTree.add(root.right, key) 
-        else: 
+        else:               # check befor go left
             root.left = BinaryTree.add(root.left, key) 
         return root
 
@@ -131,6 +131,8 @@ class BinaryTree:
             return
         _walk(self.root)
         return self.max_number
+
+
 
     def find_minimum_value(self):
         self.min_number = 0
@@ -159,6 +161,7 @@ class BinaryTree:
                 temp.append(poped.left)
             if poped.right:
                 temp.append(poped.right)
+            
         
         return output    
 
@@ -206,25 +209,17 @@ def normalBST_to_balanceBST(root):
         nodes.append(root) 
         storeBSTNodes(root.right,nodes)
 
-    # Recursive function to construct binary tree  
-    def buildTreeUtil(nodes,start,end): 
-        if start>end: 
+        return array_to_bst(nodes)
+
+    def array_to_bst(array_nums):
+        if not array_nums:
             return None
-    
-        # Get the middle element and make it root  
-        mid=(start+end)//2
-        node=nodes[mid]
-    
-        # Using index in Inorder traversal, construct  
-        # left and right subtress 
-        node.left=buildTreeUtil(nodes,start,mid-1) 
-        node.right=buildTreeUtil(nodes,mid+1,end) 
+        mid_num = len(array_nums)//2
+        node = Node(array_nums[mid_num])
+        node.left = array_to_bst(array_nums[:mid_num])
+        node.right = array_to_bst(array_nums[mid_num+1:])
         return node
 
-
-    storeBSTNodes(root,nodes) 
-    n=len(nodes) 
-    return buildTreeUtil(nodes,0,n-1)
         
 ######################################################
 # Given a binary search tree and a key,
@@ -327,18 +322,25 @@ def deletion(root, key):
             return None
         else :
             return root 
+
     # find the rightmost node and the node that want to delete it.
     key_node = None
     q = [] 
-    q.append(root) 
+
+    # 3 option here :
+    # 1- append(root) -> to get the right/left most for the whole tree
+    # 2- append(root.left) -> to get the right/left most for the left side of the tree
+    # 3- append(root.right) -> to get the right/left most for the right side of the tree
+    q.append(root)    
+
     while(len(q)): 
-        temp = q.pop(0) 
-        if temp.data == key: 
-            key_node = temp 
-        if temp.left: 
-            q.append(temp.left) 
-        if temp.right: 
-            q.append(temp.right) 
+        temp = q.pop(0)             
+        if temp.data == key:        
+            key_node = temp         
+        if temp.left:               
+            q.append(temp.left)     # this order to get the right most
+        if temp.right:              # to get the left mose
+            q.append(temp.right)    # make swap between 345 and 347,on the other world,make the append.left at the last
     if key_node :  
         x = temp.data 
         deleteDeepest(root,temp) 
@@ -369,8 +371,10 @@ def maxDepth(node):
         return 0
     else : 
   
-        # Compute the depth of each subtree 
+        # Compute the depth of left subtree 
         lDepth = maxDepth(node.left) #1
+
+        # Compute the depth of right subtree 
         rDepth = maxDepth(node.right) #2
 
         # Use the larger one            #3
@@ -380,9 +384,56 @@ def maxDepth(node):
         else: 
             hight = 1 + rDepth
             return hight
-##############################################################
+#######################################################################################################
 
+# Check if two binary trees are Isomorphic
 
+def Isomorphic(root1,root2):
+    lst1 = root1.inOrder()
+    lst2 = root2.inOrder()
+    if len(lst1) == len(lst2):
+        i = 0
+        j = len(lst2)//2
+        for k in range(len(lst1)//2):
+            if lst1[i] != lst2[j]:
+                return False
+            i += 1
+            j -= 1
+
+            if i > j:
+                return True
+        return True
+        
+############################################################################################################
+
+def find_the_path(root, x): 
+      
+    # vector to store the path  
+    arr = []
+
+    def _walk (root, arr, x):
+        arr.append(root.data)
+
+    # if it is the required node return true  
+        if root.data == x:
+            return True
+
+        # else check whether the required node exists in the left subtree or right subtree of the current node  
+        if _walk(root.left, arr, x) or _walk(root.right, arr, x):
+            return True
+
+        arr.pop(-1) # just to make space complexity O(1) 
+        return False
+
+    has_path = _walk(root, arr, x)
+
+    if (has_path): 
+        print(arr)
+ 
+    else: 
+        print("No Path")
+
+###############################################################################################################
 if __name__ == '__main__':
     bt = BinaryTree()
     bt.root = Node(6)
@@ -400,7 +451,7 @@ if __name__ == '__main__':
     # print('pre order: ',bt.preOrder())
     print(bt.find_maximum_value())
     print(bt.find_minimum_value())
-    print(bt.breadth_first())
+    print(bt.breadth_first() , 'hoooooon')
     print('-'*30)
     x = deletion(bt.root,5)
     print(bt.breadth_first())

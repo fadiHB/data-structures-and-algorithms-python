@@ -254,25 +254,7 @@ def zip_lists(list1,list2):
             current_two=False
 
     return new_list
-###############################################################################
-# Check if two binary trees are Isomorphic
 
-def Isomorphic(root1,root2):
-    lst1 = root1.inOrder()
-    lst2 = root2.inOrder()
-    if len(lst1) == len(lst2):
-        i = 0
-        for k in range(len(lst1)//2):
-            if lst1[i] != lst2[-1]:
-                return False
-            i += 1
-            j -= 1
-
-            if i > j:
-                return True
-        return True
-        
-###############################################################################
 
 
 if __name__ == '__main__': 
