@@ -17,7 +17,9 @@ Pseudocode
 def insertion_sort(lst):
     for i in range(1,len(lst)):
         j = i - 1
-        temp = lst[i]
+        temp = lst[i] # save the Chosen Element
+
+        # keep checking all the prev elements until reach the beginning
         while j >= 0 and temp < lst[j]: # for descending order, just change j to i
             lst[j+1] = lst[j]
             j -= 1
