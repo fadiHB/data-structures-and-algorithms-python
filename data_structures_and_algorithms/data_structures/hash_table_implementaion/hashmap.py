@@ -7,7 +7,7 @@ class Node:
 class Hashmap:
     def __init__(self,size):
         self.size = size
-        self.map = [None]*size
+        self.map = [None]*size # self._bucket = [None]*size
 
     def get_hash (self,key):
         ascii_total = 0
@@ -19,10 +19,10 @@ class Hashmap:
     def add (self,key, value):
         indx = self.get_hash(key)
         node = Node(key,value)
-        if not self.map[indx]:
+        if not self.map[indx]: # check if collision not occurs
             self.map[indx] = node
             return
-        self.map[indx].next = node
+        self.map[indx].next = node # if collision occurs
 
     def get(self,key):
         indx = self.get_hash(key)

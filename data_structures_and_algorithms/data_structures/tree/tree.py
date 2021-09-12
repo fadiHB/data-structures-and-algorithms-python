@@ -163,7 +163,7 @@ class BinaryTree:
                 temp.append(poped.right)
             
         
-        return output    
+        return output   
 
 
 # Convert a array to Binary Search Tree (BST)

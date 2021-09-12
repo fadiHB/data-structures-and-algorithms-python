@@ -29,11 +29,13 @@ def mergeSort(arr):
             k += 1
  
         # Checking if any element was left on the Left(L)
+        # move all the remaining elements to the arr list one by one
         while i < len(L):
             arr[k] = L[i]
             i += 1
             k += 1
         # Checking if any element was left on the Right(R)
+        # move all the remaining elements to the arr list one by one
         while j < len(R):
             arr[k] = R[j]
             j += 1

@@ -19,30 +19,3 @@
 |[Code 15 BST](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
 |[code 16 find max/min val in BT](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
 |[code 17:breadth-first](https://github.com/fadiHB/data-structures-and-algorithms-python-401d2/tree/master/data_structures_and_algorithms/data_structures/tree)|
-|[code: Class 18](class-18)|
-|[code: Class 19](class-19)|
-|[code: Class 20](class-20)|
-|[code: Class 21](class-21)|
-|[code: Class 22](class-22)|
-|[code: Class 23](class-23)|
-|[code: Class 24](class-24)|
-|[code: Class 25](class-25)|
-|[code: Class 26](class-26)|
-|[code: Class 27](class-27)|
-|[code: Class 28](class-28)|
-|[code: Class 29](class-29)|
-|[code: Class 30](class-30)|
-|[code: Class 31](class-31)|
-|[code: Class 32](class-32)|
-|[code: Class 33](class-33)|
-|[code: Class 34](class-34)|
-|[code: Class 35](class-35)|
-|[code: Class 36](class-36)|
-|[code: Class 37](class-37)|
-|[code: Class 38](class-38)|
-|[code: Class 39](class-39)|
-|[code: Class 40](class-40)|
-|[code: Class 41](class-41)|
-|[code: Class 42](class-42)|
-|[code: Class 43](class-43)|
-|[code: Class 44](class-44)|
