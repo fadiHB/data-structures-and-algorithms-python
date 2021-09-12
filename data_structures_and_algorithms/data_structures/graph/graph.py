@@ -34,28 +34,56 @@ class Graph:
         self.adjacency_list = {}
 
     def add_node(self,value):
+        """
+        Add a node to the graph
+        Arguments: value
+        Returns: The added node
+        """
         node = Vertex(value)
-        self.adjacency_list[node] = []
+        self.adjacency_list[node] = [] # Directed Graphs (Digraph) => this should contain two nodes
         return node
 
     def add_edge(self,node1=None,node2=None,weight1=0):
+        """
+        Adds a new edge between two nodes in the graph
+        If specified, assign a weight to the edge
+        Both nodes should already be in the Graph
+
+        Arguments: 2 nodes to be connected by the edge, weight (optional)
+        Returns: nothing
+        """
         if node1 not in self.adjacency_list:
             raise KeyError
         elif node2 not in self.adjacency_list:
             raise KeyError
         else:
+            # Directed Graphs (Digraph)
             edge = Edge(vertex=node2,weight=weight1)
             self.adjacency_list[node1].append(edge)
             edge = Edge(vertex=node1,weight=weight1)
             self.adjacency_list[node2].append(edge)
 
     def get_nodes(self):
+        """
+        Returns all of the nodes in the graph as a collection (set, list, or similar)
+        Arguments: none
+        """
        return self.adjacency_list.keys()
 
     def get_neighbors(self,node):
+        """
+        Returns a collection of edges connected to the given node
+        Include the weight of the connection in the returned collection
+        get neighbors
+        Arguments: node
+        """
         return self.adjacency_list.get(node,[])
 
     def size(self):
+        """
+        Returns the total number of nodes in the graph
+        Arguments: none
+        """
         return len(self.adjacency_list)
 
     def breadth_first(self,node):
