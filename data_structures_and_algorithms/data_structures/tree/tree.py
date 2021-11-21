@@ -163,7 +163,27 @@ class BinaryTree:
                 temp.append(poped.right)
             
         
-        return output   
+        return output 
+    
+    def breadth_first_2(tree: BinaryTree):
+        if not tree.root:
+            return None
+        breadth = Queue()
+        breadth.enqueue(tree.root)
+
+        list_of_items = []
+
+        while breadth.peek():
+            front = breadth.dequeue()
+            list_of_items += [front.data]
+
+            if front.left:
+                breadth.enqueue(front.left)
+
+            if front.right:
+                breadth.enqueue(front.right)
+
+        return list_of_items
 
 
 # Convert a array to Binary Search Tree (BST)
