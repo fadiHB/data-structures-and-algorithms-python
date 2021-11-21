@@ -40,7 +40,9 @@ class Graph:
         Returns: The added node
         """
         node = Vertex(value)
-        self.adjacency_list[node] = [] # Directed Graphs (Digraph) => this should contain two nodes
+        self.adjacency_list[node] = [] 
+        # list of edges ( each edges have  weight and the vertex that it connected with by this edge)
+        # Directed Graphs (Digraph) => this list should contain two edges for each instanse
         return node
 
     def add_edge(self,node1=None,node2=None,weight1=0):
@@ -68,7 +70,7 @@ class Graph:
         Returns all of the nodes in the graph as a collection (set, list, or similar)
         Arguments: none
         """
-       return self.adjacency_list.keys()
+        return self.adjacency_list.keys()
 
     def get_neighbors(self,node):
         """
@@ -77,7 +79,7 @@ class Graph:
         get neighbors
         Arguments: node
         """
-        return self.adjacency_list.get(node,[])
+        return self.adjacency_list.get(node,[]) 
 
     def size(self):
         """
@@ -187,7 +189,8 @@ if __name__ == '__main__':
     aj_list.add_edge(d,f)
     aj_list.add_edge(h,f)
     for node in aj_list.depth_first():
-        print(node.value)
-    print('new--------------------------')
+        print(node.value, end=" ")
+
+    print('\nnew --------------------------')
     for node in aj_list.breadth_first(a):
-        print(node.value)
+        print(node.value, end=" ")
